@@ -1,0 +1,149 @@
+body {
+    /* overflow: hidden; */
+    background-color: #121212;
+    margin: 0;
+    color: white;
+    font-size: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  :root{
+    --medium-text: 1.125rem; /*18px*/
+  }
+
+  
+  canvas{
+    z-index: -99;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  } 
+
+
+  h1{
+    font-size: 7.5rem; /*120px*/
+    font-family: Infini, serif;
+  }
+
+  h2{
+    font-size: 3.5rem; /*56px*/
+    font-family: Bahiana, sans-serif;
+  }
+
+  h3{
+    font-size: 3.5rem;
+    font-family: Infini, serif;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  button{
+    background-color: transparent;
+    border: 2px solid #FF1010;
+    color: white;
+    text-align: center;
+    font-family: Infini, serif;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: linear 300ms;
+    z-index: 9999;
+  }
+
+  button:hover{
+    background-color: #FF1010;
+    border: 2px solid transparent;
+  }
+
+  button:focus {outline:0;}
+
+  .divider{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 8rem;
+  }
+
+  img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .artwork{
+    width: 100%;
+    height: auto;
+  }
+
+  
+
+  .medium{
+    height: 4rem;
+    padding: 0 1rem;
+    max-width: 20rem;
+    line-height: calc(4rem - 4px);
+    font-size: var(--medium-text);
+    margin-right: 2rem;
+    margin-left: auto;
+  }
+
+  .header{
+    height: auto;
+    width: 100%;
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: block;
+
+  }
+
+  .first-fold-container{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    /* top: -8rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* z-index: -1; */
+    /* display: none; */
+  }
+
+  .first-fold-wrapper{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+  .how-it-works{
+    margin: 0 auto;
+    width: 100%;
+  }
+
+.box{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 30%;
+  margin-bottom: 8rem;
+}
+
+.description{
+  margin-top: 2rem;
+  font-family: MedievalSharp;
+  font-size: 2rem;
+}
+
+.faq-container{
+  width: 40%;
+  margin: 0 auto;
+
+}

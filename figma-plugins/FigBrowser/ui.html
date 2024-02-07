@@ -1,0 +1,17 @@
+<h2>FigBrowser</h2>
+<p>Count: <input id="url" value="https://www.google.com"></p>
+<button id="open">Open</button>
+<button id="cancel">Cancel</button>
+
+<script>
+
+document.getElementById('open').onclick = () => {
+  const url = document.getElementById('url').value;
+  parent.postMessage({ pluginMessage: { type: 'show-website', url } }, '*')
+}
+
+document.getElementById('cancel').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*')
+}
+
+</script>

@@ -1,0 +1,48 @@
+
+
+
+<script>
+
+var webSocket = null;
+var divDisconnected = document.getElementById('disconnected');
+var divConnected = document.getElementById('connected');
+
+
+function openWSConnection(protocol, hostname, port, endpoint) {
+    var webSocketURL = null;
+    webSocketURL = protocol + "://" + hostname + ":" + port + endpoint;
+    console.log("openWSConnection::Connecting to: " + webSocketURL);
+    try {
+        webSocket = new WebSocket(webSocketURL);
+        webSocket.onopen = function(openEvent) {
+            console.log("open");
+        };
+        webSocket.onclose = function (closeEvent) {
+           console.log("close");
+        };
+        webSocket.onerror = function (errorEvent) {
+            console.log("WebSocket ERROR: " + JSON.stringify(errorEvent, null, 4));
+        };
+        webSocket.onmessage = function (event) {
+            if (event.data.indexOf("error") > 0) {
+                console.log("WebSocket message error: " + event.data.error);
+            } else {
+                var cmd = event.data.split('/');
+       
+                        // document.getElementById('info').value = 'mouse clicked: ' + cmd[2] + ', ' + cmd[3];
+                        // console.log("received: " + cmd[2] + "2:" + cmd[4]);
+                        var positions = [cmd[2],cmd[4]]
+                        console.log("inputs detected");
+                        window.parent.postMessage({ pluginMessage: positions }, '*');
+          
+            }
+        };
+    } catch (exception) {
+        console.error(exception);
+    }
+}
+
+openWSConnection('ws', 'localhost', 8025, '/processing');
+
+  </script>
+  

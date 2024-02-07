@@ -1,0 +1,14 @@
+@font-face {
+    font-family: Infini;
+    src: url(../fonts/infini-bold.woff);
+  }
+
+  @font-face {
+    font-family: Bahiana;
+    src: url(../fonts/Bahiana-Regular.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: MedievalSharp;
+    src: url(../fonts/MedievalSharp-Regular.ttf) format('truetype');
+  }

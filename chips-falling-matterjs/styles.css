@@ -1,0 +1,48 @@
+body{
+    background-color: white;
+}
+
+@font-face {
+    font-family: Obviously-Bold;
+    src: url('ObviouslyBold.ttf');
+}
+
+@font-face {
+    font-family: Obviously-Wide;
+    src: url('ObviouslyWide.ttf');
+}
+
+canvas{
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.chip{
+    padding: 6px 12px;
+    font-size: 14px;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid black;
+    color: 14151E;
+    background-color: white;
+    border-radius: 32px;
+    position: absolute;
+    user-select: none;
+    font-family: Obviously-Bold;
+    background-color: #FFC6AD;
+}
+
+#heading{
+    position: absolute;
+    top: 160px;
+    left: 150px;
+    font-family: Obviously-Wide;
+    font-size: 56px;
+    color: #FCF7EB;
+    line-height: 100%;
+    user-select: none;
+}

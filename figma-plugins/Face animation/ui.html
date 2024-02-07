@@ -1,0 +1,53 @@
+<!-- <h2>Rectangle Creator</h2>
+<p>Count: <input id="count" value="5"></p>
+<button id="create">Create</button>
+<button id="cancel">Cancel</button> -->
+
+
+<script>
+
+
+var count = 0;
+
+
+
+// function getCirclePoints(){
+
+  setInterval(
+    
+  function(){
+  fetch('http://localhost:8000/data')
+  .then(response => response.json())
+  .then(outputs => {
+    const { points, labels } = outputs;
+
+    var updatedPoints = outputs.points;
+    parent.postMessage({ pluginMessage: { type: 'create-circles', updatedPoints } }, '*')
+
+    console.log("ran");
+
+    // getCirclePoints();
+
+
+  })
+}
+
+, 10);
+
+
+
+
+
+
+
+// document.getElementById('create').onclick = () => {
+//   const textbox = document.getElementById('count');
+//   const count = parseInt(textbox.value, 10);
+  
+// }
+
+// document.getElementById('cancel').onclick = () => {
+//   parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*')
+// }
+
+</script>
